@@ -1,0 +1,21 @@
+{
+  "FunctionName": "PaymentProcessor",
+  "Description": "Payment processor for CHEFit web application",
+  "Handler": "handler.handle",
+  "Timeout": 5,
+  "MemorySize": 256,
+  "Runtime": "python2.7",
+  "Publish": true,
+  "Role": "arn:aws:iam::165655401843:role/gochefit-lambda-function",
+  "KMSKeyArn": "arn:aws:kms:us-east-1:165655401843:key/330b7e63-dcde-4060-8724-6368ac4e2425",
+  "Environment": {
+    "Variables": {
+      "AUTHORIZE_NAME": "AQECAHhKXFDVoDekknYVxSf5TrVjqTnSAHI+6Y1xLjPhZ80t9wAAAGYwZAYJKoZIhvcNAQcGoFcwVQIBADBQBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDLCJJD4t7/OB7c7FCwIBEIAjSSF0gOpK4E3tlroq+c1avLyFGbEpAJq3egvb0fk+eWFDOXA=",
+      "AUTHORIZE_TRANSACTION_KEY": "AQECAHhKXFDVoDekknYVxSf5TrVjqTnSAHI+6Y1xLjPhZ80t9wAAAG4wbAYJKoZIhvcNAQcGoF8wXQIBADBYBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDBxzLMlM/ozRmLwJqAIBEIArPznom36/Xm8dJ2l0SUhCR0ixfaIsyIyvw/stDwdAE2Xh3ukXzfUtwbeJGw==",
+      "AUTHORIZE_URL": "AQECAHhKXFDVoDekknYVxSf5TrVjqTnSAHI+6Y1xLjPhZ80t9wAAAI8wgYwGCSqGSIb3DQEHBqB/MH0CAQAweAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxTb1a9eXfnH+IL5LUCARCASzxB9RuE8tOQbMvrxhOOB4sKfnqg/aHaLc9H6B7GVl4lJE9GL4dJXI5rpNA25a9vCuGlpum4157YvTp/B96drwTOnz2FneiflU6J4Q=="
+      }
+    },
+  "DeadLetterConfig": {
+    "TargetArn": "arn:aws:sns:us-east-1:165655401843:CHEFitDLQ"
+    }
+}
